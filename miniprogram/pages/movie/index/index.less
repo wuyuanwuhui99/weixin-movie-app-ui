@@ -1,0 +1,38 @@
+@import '../../../theme/color.less';
+@import '../../../theme/size.less';
+@import '../../../theme/style.less';
+
+#index-wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: @page-background-color;
+    #page-container{
+        flex:1;
+        overflow: auto;
+    }
+    #tab-bar{
+        display: flex;
+        background-color: @module-background-color;
+        border-top: @tab-border-buttom;
+        padding: @middle-margin 0;
+        .tab-item{
+            flex:1;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            .tab-icon{
+                width: @tab-icon-size;
+                height: @tab-icon-size;
+                margin-bottom: @small-margin;
+            }
+            .tab-text{
+                color:#000;
+                &.tab-text-active{
+                    color: @tab-color-active;
+                }
+            }
+        }
+    }
+}

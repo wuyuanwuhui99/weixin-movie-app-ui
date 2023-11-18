@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/movie/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电影",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,30 @@
+<view id="index-wrapper">
+    <view id="page-container">
+        <Home style="display: {{activeIndex==0 ? '' : 'none'}};"></Home>
+        <Movie isInit="{{isInit[1]}}" style="display: {{activeIndex==1 ? '' : 'none'}};"></Movie>
+        <Tv isInit="{{isInit[2]}}" style="display: {{activeIndex==2 ? '' : 'none'}};"></Tv>
+        <My isInit="{{isInit[3]}}" style="display: {{activeIndex==3 ? '' : 'none'}};"></My>
+    </view>
+    <view id="tab-bar">
+        <view class="tab-item" bindtap="useTab" data-index="0">
+            <image class="tab-icon" wx:if="{{activeIndex===0}}" src="../../../images/icon-home-active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon-home.png"/>
+            <text class="tab-text {{activeIndex == 0 ? 'tab-text-active' : ''}}">首页</text>
+        </view>
+        <view class="tab-item" bindtap="useTab" data-index="1">
+            <image class="tab-icon" wx:if="{{activeIndex==1}}" src="../../../images/icon-movie-active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon-movie.png"/>
+            <text class="tab-text {{activeIndex == 1 ? 'tab-text-active' : ''}}">电影</text>
+        </view>
+        <view class="tab-item" bindtap="useTab" data-index="2">
+            <image class="tab-icon" wx:if="{{activeIndex==2}}" src="../../../images/icon-tv-active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon-tv.png"/>
+            <text class="tab-text {{activeIndex == 2 ? 'tab-text-active' : ''}}">电视剧</text>
+        </view>
+        <view class="tab-item" bindtap="useTab" data-index="3">
+            <image class="tab-icon" wx:if="{{activeIndex==2}}" src="../../../images/icon-user-active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon-user.png"/>
+            <text class="tab-text {{activeIndex == 3 ? 'tab-text-active' : ''}}">我的</text>
+        </view>
+    </view>
+</view>
