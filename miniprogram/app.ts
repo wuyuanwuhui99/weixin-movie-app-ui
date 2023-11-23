@@ -1,6 +1,6 @@
 // app.ts
-import api from './api/api';
-import UserDataInterface from './interface/UserDataInterface';
+import api from './movie/api/api';
+import UserDataInterface from './movie/interface/UserDataInterface';
 
 App<IAppOption>({
     globalData: {
