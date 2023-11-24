@@ -1,2 +1,3 @@
-<!--component/home/Home.wxml-->
-<text>component/home/Home.wxml</text>
+<view class="module-block">
+    <image class="user-avater user-avater-middle" src="{{avater}}"/>
+</view>

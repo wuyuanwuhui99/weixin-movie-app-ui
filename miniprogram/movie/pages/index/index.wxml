@@ -1,9 +1,9 @@
 <view id="index-wrapper">
     <view id="page-container">
         <Home style="display: {{activeIndex==0 ? '' : 'none'}};"></Home>
-        <Movie isInit="{{isInit[1]}}" style="display: {{activeIndex==1 ? '' : 'none'}};"></Movie>
-        <Tv isInit="{{isInit[2]}}" style="display: {{activeIndex==2 ? '' : 'none'}};"></Tv>
-        <My isInit="{{isInit[3]}}" style="display: {{activeIndex==3 ? '' : 'none'}};"></My>
+        <Movie isInit="{{isInitPage[1]}}" style="display: {{activeIndex==1 ? '' : 'none'}};"></Movie>
+        <Tv isInit="{{isInitPage[2]}}" style="display: {{activeIndex==2 ? '' : 'none'}};"></Tv>
+        <My isInit="{{isInitPage[3]}}" style="display: {{activeIndex==3 ? '' : 'none'}};"></My>
     </view>
     <view id="tab-bar">
         <view class="tab-item" bindtap="useTab" data-index="0">

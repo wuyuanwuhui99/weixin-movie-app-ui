@@ -1,4 +1,5 @@
-// component/tv/Tv.ts
+import {HOST} from '../../../config/constant';
+const app = getApp();
 Component({
 
     /**
@@ -14,7 +15,9 @@ Component({
     /**
      * 组件的初始数据
      */
-    data: {},
+    data: {
+        avater: app.globalData.userData ? HOST + app.globalData.userData.avater : null
+    },
 
     /**
      * 组件的方法列表
