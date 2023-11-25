@@ -1,17 +1,17 @@
 @import '../../../theme/color.less';
 @import '../../../theme/size.less';
-
-#index-wrapper{
+@import '../../../theme/style.less';
+.index-wrapper{
     height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: @page-background-color;
-    #page-container{
+    .page-container{
         flex:1;
         overflow: auto;
         @page-padding: 20rpx;
     }
-    #tab-bar{
+    .tab-bar{
         display: flex;
         background-color: @module-background-color;
         border-top: @tab-border-buttom;
@@ -28,7 +28,7 @@
                 margin-bottom: @small-margin;
             }
             .tab-text{
-                color:#000;
+                color:.000;
                 &.tab-text-active{
                     color: @tab-color-active;
                 }

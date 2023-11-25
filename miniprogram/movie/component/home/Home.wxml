@@ -1,3 +1,8 @@
-<view class="module-block">
-    <image class="user-avater user-avater-middle" src="{{avater}}"/>
+<view class="home-wrapper">
+    <view class="module-block search-wrapper">
+        <image class="user-avater user-avater-middle" wx:if="{{avater}}" src="{{avater}}"/>
+        <view class="search-input-wrapper">
+            <text class="search-input-placehold">{{keyword}}</text>
+        </view>
+    </view>
 </view>
