@@ -26,8 +26,8 @@ Page({
   onLoad() {
     const token = wx.getStorageSync('token');
     httpRequest.setToken(token);
-    httpRequest.get<MyAwesomeData<UserDataInterface>>(api.getUserData).then((res:MyAwesomeData<UserDataInterface>)=>{
-        const userData:UserDataInterface =  res.data as UserDataInterface;
+    httpRequest.get<UserDataInterface>(api.getUserData).then((res)=>{
+        const userData:UserDataInterface =  res.data;
         app.globalData.userData = userData;
         wx.setStorage('token', res.token);
         httpRequest.setToken(res.token);

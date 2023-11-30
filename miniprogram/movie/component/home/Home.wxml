@@ -9,19 +9,19 @@
     <view class="classify-wrapper module-block">
         <view class="classify-item">
             <image class="classify-img" src="../../../images/icon-hot.png"/>
-            <text>热门</text>
+            <text class="classify-text">热门</text>
         </view>
         <view class="classify-item">
             <image class="classify-img" src="../../../images/icon-play.png"/>
-            <text>预告</text>
+            <text class="classify-text">预告</text>
         </view>
         <view class="classify-item">
             <image class="classify-img" src="../../../images/icon-top.png"/>
-            <text>最新</text>
+            <text class="classify-text">最新</text>
         </view>
         <view class="classify-item">
             <image class="classify-img" src="../../../images/icon-classify.png"/>
-            <text>分类</text>
+            <text class="classify-text">分类</text>
         </view>
     </view>
 </view>

@@ -15,7 +15,7 @@ export enum HttpMethod {
 */
 interface RequestConfig {
 	/** API路径 */
-	url?: string
+	url: string
 	/** Method类型 */
 	method?: HttpMethod
 	/** 接口返回数据 */
@@ -41,7 +41,7 @@ export interface MyAwesomeData<T> {
 
 class HttpRequest {
     private static instance: HttpRequest;
-    private token: string;
+    private token: string = '';
 	private constructor() { }
 	/** 请求函数(单例模式)
 	*
@@ -56,7 +56,7 @@ class HttpRequest {
 	 })
 	* ```
     */
-    public setToken(token:String){
+    public setToken(token:string){
         this.token = token;
     }
 
@@ -113,7 +113,7 @@ class HttpRequest {
 					const data = res.data
 					/** 接口请求成功*/
 					if (code == 200) {
-						resolve(data as T)
+						resolve(data as MyAwesomeData<T>)
 					} else if (code === 401) {
 						// 未授权
 						!requestConfig.noShowMsg && wx.showModal({
