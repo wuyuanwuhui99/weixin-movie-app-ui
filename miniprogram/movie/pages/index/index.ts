@@ -1,3 +1,8 @@
+import api from '../../api/api';
+import {UserDataInterface} from '../../interface';
+import {httpRequest,MyAwesomeData} from '../../../utils/HttpUtils';
+const app = getApp();
+
 Page({
 
   /**
@@ -19,7 +24,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    
+    const token = wx.getStorageSync('token');
+    httpRequest.setToken(token);
+    httpRequest.get<MyAwesomeData<UserDataInterface>>(api.getUserData).then((res:MyAwesomeData<UserDataInterface>)=>{
+        const userData:UserDataInterface =  res.data as UserDataInterface;
+        app.globalData.userData = userData;
+        wx.setStorage('token', res.token);
+        httpRequest.setToken(res.token);
+        this.setData({
+            isInitData:true
+        })
+    })
   },
 
   /**

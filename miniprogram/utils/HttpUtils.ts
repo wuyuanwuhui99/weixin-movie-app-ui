@@ -41,7 +41,7 @@ export interface MyAwesomeData<T> {
 
 class HttpRequest {
     private static instance: HttpRequest;
-    private token:String;
+    private token: string;
 	private constructor() { }
 	/** 请求函数(单例模式)
 	*
@@ -64,7 +64,7 @@ class HttpRequest {
 		if (!this.instance) {
 			this.instance = new HttpRequest()
 		}
-		return this.instance
+		return this.instance;
 	}
 
 	// 处理请求异常状态码

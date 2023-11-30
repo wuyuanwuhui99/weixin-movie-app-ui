@@ -1,6 +1,5 @@
 {
   "pages": [
-    "movie/pages/login/login",
     "movie/pages/index/index"
   ],
   "window": {

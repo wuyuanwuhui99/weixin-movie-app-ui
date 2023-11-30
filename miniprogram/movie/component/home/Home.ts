@@ -1,15 +1,18 @@
 import {HOST} from '../../../config/constant';
 import {getKeyWordService} from '../../service/index';
-import Movieinterface from '../../interface/Movieinterface';
+import {Movieinterface} from '../../interface';
 
 const app = getApp();
 Component({
 
     created(){
+        this.useMovieKeyWord();
+    },
+
+    attached(){
         this.setData({
             avater: HOST + app.globalData.userData.avater
-        })
-        this.useMovieKeyWord();
+        });
     },
 
     /**
@@ -17,7 +20,7 @@ Component({
      */
     data: {
         keyword: '',
-        avater: app.globalData.userData ? HOST + app.globalData.userData.avater : null
+        avater: null
     },
 
     /**
@@ -33,7 +36,7 @@ Component({
             getKeyWordService('电影').then((res)=>{
                 const searchMovie:Movieinterface = res.data as Movieinterface;
                 this.setData({
-                    keyword: searchMovie.movieName
+                    keyword: searchMovie.movieName,
                 });
             })
         }

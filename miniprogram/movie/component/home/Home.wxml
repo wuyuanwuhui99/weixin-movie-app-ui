@@ -1,8 +1,27 @@
 <view class="home-wrapper">
-    <view class="module-block search-wrapper">
+    <view class="search-wrapper module-block">
         <image class="user-avater user-avater-middle" wx:if="{{avater}}" src="{{avater}}"/>
         <view class="search-input-wrapper">
             <text class="search-input-placehold">{{keyword}}</text>
+        </view>
+    </view>
+
+    <view class="classify-wrapper module-block">
+        <view class="classify-item">
+            <image class="classify-img" src="../../../images/icon-hot.png"/>
+            <text>热门</text>
+        </view>
+        <view class="classify-item">
+            <image class="classify-img" src="../../../images/icon-play.png"/>
+            <text>预告</text>
+        </view>
+        <view class="classify-item">
+            <image class="classify-img" src="../../../images/icon-top.png"/>
+            <text>最新</text>
+        </view>
+        <view class="classify-item">
+            <image class="classify-img" src="../../../images/icon-classify.png"/>
+            <text>分类</text>
         </view>
     </view>
 </view>

@@ -14,7 +14,9 @@ Component({
     /**
      * 组件的初始数据
      */
-    data: {},
+    data: {
+        isDone<bool>:false
+    },
 
     /**
      * 组件的方法列表
@@ -27,7 +29,8 @@ Component({
 
     observers: {
         isInit(value) {
-            if (value) {
+            if (value && !this.data.isDone) {
+                this.data.isDone = true;
                 this.init();
             }
         }
