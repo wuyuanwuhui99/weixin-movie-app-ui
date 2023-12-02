@@ -144,7 +144,7 @@ class HttpRequest {
 	 * @param {RequestConfig} OtherConfig request其他配置
 	 * @return {*}
 	 */
-	public get<T>(url: string, data?: Object, OtherConfig?: RequestConfig) {
+	public get<T>(url: string, data?: Object, OtherConfig?: RequestConfig):Promise<MyAwesomeData<T>> {
 		return this.request<T>({ method: HttpMethod.GET, url, data, ...OtherConfig })
 	}
 
@@ -166,7 +166,7 @@ class HttpRequest {
 	 * @param {RequestConfig} OtherConfig request其他配置
 	 * @return {*}
 	 */
-	public delete<T>(url: string, data: Object, OtherConfig?: RequestConfig) {
+	public delete<T>(url: string, data: Object, OtherConfig?: RequestConfig):Promise<MyAwesomeData<T>> {
 		return this.request<T>({ method: HttpMethod.DELETE, url, data, ...OtherConfig })
 	}
 
@@ -177,10 +177,9 @@ class HttpRequest {
 	 * @param {RequestConfig} OtherConfig request其他配置
 	 * @return {*}
 	 */
-	public put<T>(url: string, data?: Object, OtherConfig?: RequestConfig) {
+	public put<T>(url: string, data?: Object, OtherConfig?: RequestConfig):Promise<MyAwesomeData<T>> {
 		return this.request<T>({ method: HttpMethod.PUT, url, data, ...OtherConfig })
 	}
-
 }
 
 export const httpRequest = HttpRequest.getInstance()

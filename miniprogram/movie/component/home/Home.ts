@@ -34,9 +34,8 @@ Component({
         */
        useMovieKeyWord() {
             getKeyWordService('电影').then((res)=>{
-                const searchMovie:Movieinterface = res.data as Movieinterface;
                 this.setData({
-                    keyword: searchMovie.movieName,
+                    keyword: res.data.movieName,
                 });
             })
         }

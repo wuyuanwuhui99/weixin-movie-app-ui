@@ -1,6 +1,6 @@
 import api from '../../api/api';
 import {UserDataInterface} from '../../interface';
-import {httpRequest,MyAwesomeData} from '../../../utils/HttpUtils';
+import {httpRequest} from '../../../utils/HttpUtils';
 const app = getApp();
 
 Page({
