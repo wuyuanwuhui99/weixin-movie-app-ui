@@ -1,6 +1,5 @@
 import {HOST} from '../../../config/constant';
 import {getKeyWordService} from '../../service/index';
-import {Movieinterface} from '../../interface';
 
 const app = getApp();
 Component({

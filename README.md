@@ -30,10 +30,10 @@
 ![app首页](音乐播放页.jpg)
 ![app首页](音乐歌词页.png)
 ![app首页](音乐歌手页.jpg)
+![app首页](实际预览效果.png)
 =============================界面预览（如果无法预览，请查看项目根目录png文件）==========================
 
-后端接口使用springboot开发，所有电影数据来自于python爬虫程序，爬取第三方电影网站数据
-
+使用ts语言开发，后端接口使用springboot开发，所有电影数据来自于python爬虫程序，爬取第三方电影网站数据
 
 后端接口项目和sql语句：https://github.com/wuyuanwuhui99/springboot-app-service
 

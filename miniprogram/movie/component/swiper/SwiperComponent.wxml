@@ -1,0 +1,7 @@
+<swiper class="swiper-wrapper" indicator-dots autoplay="true" interval="5000" duration="500" 	indicator-active-color="#ffae00" circular="true">
+    <block wx:for="{{movieList}}" wx:key="id">
+        <swiper-item class="swiper-item">
+            <image mode="aspectFill" class="swiper-item" src="{{HOST + item.localImg}}"/>
+        </swiper-item>
+    </block>
+</swiper>

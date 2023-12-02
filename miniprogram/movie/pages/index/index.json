@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-      "Home":"../../component/home/Home",
-      "Movie":"../../component/movie/Movie",
-      "Tv":"../../component/tv/Tv",
-      "My":"../../component/my/My"
+      "HomeComponent":"../../component/home/HomeComponent",
+      "MovieComponent":"../../component/movie/MovieComponent",
+      "TvComponent":"../../component/tv/TvComponent",
+      "MyComponent":"../../component/my/MyComponent"
   }
 }

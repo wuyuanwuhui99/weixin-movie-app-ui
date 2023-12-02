@@ -6,6 +6,8 @@
         </view>
     </view>
 
+    <SwiperComponent classify='电影'></SwiperComponent>
+
     <view class="classify-wrapper module-block">
         <view class="classify-item">
             <image class="classify-img" src="../../../images/icon-hot.png"/>
