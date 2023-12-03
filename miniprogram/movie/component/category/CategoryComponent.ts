@@ -30,9 +30,7 @@ Component({
    */
   methods: {
     useCategoryList(){
-        console.log(this.properties.classifyItem)
-        getCategoryListService(this.properties.classifyItem).then((res)=>{
-            console.log(res)
+        getCategoryListService(this.properties.classifyItem as ClassifyInterface).then((res)=>{
             this.setData({
                 movieList: res.data
             })
