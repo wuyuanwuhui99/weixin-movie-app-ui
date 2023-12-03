@@ -1,0 +1,26 @@
+@import '../../../theme/style.less';
+@import '../../../theme/size.less';
+.scroll-view{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: @page-padding;
+    .movie-item-wrapper{
+        display: flex;
+        align-items: center;
+        width: @movie-img-width;
+        flex-direction: column;
+        margin-left: @page-padding;
+        &:first-child{
+            margin-left: 0;
+        }
+        .movie-img{
+            width: @movie-img-width;
+            height: @movie-img-height;
+            border-radius: @module-border-radius;
+            margin-bottom: @small-margin;
+        }
+        .movie-name{
+            display: inline;
+        }
+    }
+}

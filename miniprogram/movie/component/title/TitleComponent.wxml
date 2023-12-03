@@ -1,0 +1,4 @@
+<view class="title-wrapper">
+    <view class="title-line"></view>
+    <text class="title-text">{{title}}</text>
+</view>

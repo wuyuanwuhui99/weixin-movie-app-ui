@@ -26,4 +26,5 @@
             <text class="classify-text">分类</text>
         </view>
     </view>
+    <CategoryComponent wx:for="{{allCategoryList}}" wx:key="category" classifyItem="{{item}}"></CategoryComponent>
 </view>

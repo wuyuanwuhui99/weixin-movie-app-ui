@@ -1,6 +1,6 @@
 import {httpRequest,MyAwesomeData} from '../../utils/HttpUtils';
 import api from '../api/api';
-import {MovieInterface,UserDataInterface} from '../interface/index'
+import {MovieInterface,UserDataInterface,ClassifyInterface} from '../interface/index'
 
 /**
  * @description: 获取搜索词
@@ -32,7 +32,16 @@ export const getUserDataService = (token:string):Promise<MyAwesomeData<UserDataI
  * @date: 2023-12-1 23:09
  * @author wuwenqiang
  */
-export const getCategoryListService = (classify:string,category:string):Promise<MyAwesomeData<Array<MovieInterface>>>=> {
-    console.log(classify,category,111)
-    return httpRequest.get<Array<MovieInterface>>(api.getCategoryList,{category,classify})
+export const getCategoryListService = (classifyItem:ClassifyInterface):Promise<MyAwesomeData<Array<MovieInterface>>>=> {
+    return httpRequest.get<Array<MovieInterface>>(api.getCategoryList,classifyItem)
   }
+
+  /**
+ * @description: 根据页面获取所有分类
+ * @date: 2023-123 11:07
+ * @author wuwenqiang
+ */
+  export const getAllCategoryListByPageNameService = (pageName:string):Promise<MyAwesomeData<Array<ClassifyInterface>>>=> {
+    return httpRequest.get<Array<ClassifyInterface>>(api.getAllCategoryListByPageName,{pageName})
+  }
+  

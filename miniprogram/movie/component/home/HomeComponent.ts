@@ -1,11 +1,13 @@
 import {HOST} from '../../../config/constant';
-import {getKeyWordService} from '../../service/index';
+import { ClassifyInterface } from '../../interface';
+import {getKeyWordService,getAllCategoryListByPageNameService} from '../../service/index';
 
 const app = getApp();
 Component({
 
     created(){
         this.useMovieKeyWord();
+        this.useAllCategoryListByPageName()
     },
 
     attached(){
@@ -19,7 +21,8 @@ Component({
      */
     data: {
         keyword: '',
-        avater: null
+        avater: null,
+        allCategoryList:[] as Array<ClassifyInterface>
     },
 
     /**
@@ -36,6 +39,19 @@ Component({
                 this.setData({
                     keyword: res.data.movieName,
                 });
+            })
+        },
+
+        /**
+         * @description: 获取电影首页所有的分类
+         * @author wuwenqiang
+         * @date 2023-12-03 10:12
+        */
+       useAllCategoryListByPageName() {
+            getAllCategoryListByPageNameService('首页').then((res)=>{
+                this.setData({
+                    allCategoryList: res.data
+                })
             })
         }
     }

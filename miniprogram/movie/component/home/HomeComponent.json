@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "SwiperComponent":"../swiper/SwiperComponent"
+    "SwiperComponent": "../swiper/SwiperComponent",
+    "CategoryComponent": "../category/CategoryComponent"
   }
 }

@@ -1,21 +1,16 @@
+import {ClassifyInterface, MovieInterface} from '../../interface/index';
 import {getCategoryListService} from '../../service/index';
 import {HOST} from '../../../config/constant';
-import { MovieInterface } from '../../interface';
-
 Component({
 
   /**
    * 组件的属性列表
    */
   properties: {
-    classify:{
-        type:String,
-        value:'电影'
+    classifyItem:{
+        type: Object,
+        value:{} as ClassifyInterface
     }
-  },
-
-  created(){
-    this.useCategoryList();
   },
 
   /**
@@ -26,14 +21,20 @@ Component({
     movieList:[] as Array<MovieInterface>
   },
 
+  attached(){
+    this.useCategoryList();
+  },
+
   /**
    * 组件的方法列表
    */
   methods: {
     useCategoryList(){
-        getCategoryListService({classify:this.properties.classify,category:'轮播'}).then((res)=>{
+        console.log(this.properties.classifyItem)
+        getCategoryListService(this.properties.classifyItem).then((res)=>{
+            console.log(res)
             this.setData({
-                movieList: res.data.slice(0,5)
+                movieList: res.data
             })
         })
     }
