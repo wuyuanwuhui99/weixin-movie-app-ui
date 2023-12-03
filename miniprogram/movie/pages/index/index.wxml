@@ -1,9 +1,9 @@
-<view class="index-wrapper" wx:if="{{isInitData}}">
+<view class="index-wrapper" wx:if="{{isInitPage}}">
     <view class="page-container">
         <HomeComponent style="display: {{activeIndex==0 ? '' : 'none'}};"></HomeComponent>
-        <MovieComponent isInit="{{isInitPage[1]}}" style="display: {{activeIndex==1 ? '' : 'none'}};"></MovieComponent>
-        <TvComponent isInit="{{isInitPage[2]}}" style="display: {{activeIndex==2 ? '' : 'none'}};"></TvComponent>
-        <MyComponent isInit="{{isInitPage[3]}}" style="display: {{activeIndex==3 ? '' : 'none'}};"></MyComponent>
+        <MovieComponent isInit="{{isInitComponent[1]}}" style="display: {{activeIndex==1 ? '' : 'none'}};"></MovieComponent>
+        <TvComponent isInit="{{isInitComponent[2]}}" style="display: {{activeIndex==2 ? '' : 'none'}};"></TvComponent>
+        <MyComponent isInit="{{isInitComponent[3]}}" style="display: {{activeIndex==3 ? '' : 'none'}};"></MyComponent>
     </view>
     <view class="tab-bar">
         <view class="tab-item" bindtap="useTab" data-index="0">

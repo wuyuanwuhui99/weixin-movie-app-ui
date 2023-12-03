@@ -10,14 +10,14 @@ Page({
    */
   data: {
     activeIndex: 0,// 底部导航栏当前下标,
-    isInitData:false,// 是否已经加载用户信息
-    isInitPage:[true,false,false,false]// 用来判断底部四个tab选项卡是否已经初始化，默认第一个已经初始化
+    isInitPage:false,// 是否已经加载用户信息
+    isInitComponent:[true,false,false,false]// 用来判断底部四个tab选项卡是否已经初始化，默认第一个已经初始化
   },
 
   useTab(event:ClickEvent){
     const activeIndex = event.currentTarget.dataset.index
-    this.data.isInitPage[activeIndex] = true;
-    this.setData({activeIndex,isInitPage:this.data.isInitPage});
+    this.data.isInitComponent[activeIndex] = true;
+    this.setData({activeIndex,isInitComponent:this.data.isInitComponent});
   },
 
   /**
@@ -29,10 +29,10 @@ Page({
     httpRequest.get<UserDataInterface>(api.getUserData).then((res)=>{
         const userData:UserDataInterface =  res.data;
         app.globalData.userData = userData;
-        wx.setStorage('token', res.token);
+        wx.setStorage({key:'token', data:res.token});
         httpRequest.setToken(res.token);
         this.setData({
-            isInitData:true
+            isInitPage:true
         })
     })
   },
