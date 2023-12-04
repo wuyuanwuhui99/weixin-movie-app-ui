@@ -41,6 +41,8 @@ flutter版本参见: https://github.com/wuyuanwuhui99/flutter-movie-app-ui
 
 react native版本参见: https://github.com/wuyuanwuhui99/react-native-app-ui
 
+java安卓原生版本参见: https://github.com/wuyuanwuhui99/Harmony_movie_app_ui
+
 harmony鸿蒙版本参见: https://github.com/wuyuanwuhui99/Harmony_movie_app_ui
 
 vue在线音乐项目：https://github.com/wuyuanwuhui99/vue-music-app-ui
