@@ -1,13 +1,6 @@
-<view class="home-wrapper">
-    <view class="search-wrapper module-block">
-        <image class="user-avater user-avater-middle" wx:if="{{avater}}" src="{{avater}}"/>
-        <view class="search-input-wrapper">
-            <text class="search-input-placehold">{{keyword}}</text>
-        </view>
-    </view>
-
+<scroll-view class="scroll-view" bindscrolltolower="useLoadMore" scroll-y class="scroll-view">
+    <SearchComponent classify="电影"/>
     <SwiperComponent classify='电影'></SwiperComponent>
-
     <view class="classify-wrapper module-block">
         <view class="classify-item">
             <image class="classify-img" src="../../../images/icon-hot.png"/>
@@ -26,5 +19,6 @@
             <text class="classify-text">分类</text>
         </view>
     </view>
-    <CategoryComponent wx:for="{{allCategoryList}}" wx:key="category" classifyItem="{{item}}"></CategoryComponent>
-</view>
+    <CategoryComponent wx:for="{{currentCategoryList}}" wx:key="category" classifyItem="{{item}}"></CategoryComponent>
+    <view class="bottom-tip">{{allCategoryList.length === currentCategoryList.length ? '已经到底了':'正在加载更多'}}</view>
+</scroll-view>

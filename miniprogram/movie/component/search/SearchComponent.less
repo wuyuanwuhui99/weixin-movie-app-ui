@@ -1,0 +1,19 @@
+@import '../../../theme/style.less';
+@import '../../../theme/size.less';
+@import '../../../theme/color.less';
+.search-wrapper{
+    display: flex;
+    .search-input-wrapper{
+        flex: 1;
+        margin-left: @page-padding;
+        height: @middle-avater;
+        background-color: @search-input-color;
+        border-radius: @btn-border-radius;
+        display: flex;
+        align-items: center;
+        padding-left: @page-padding;
+        .search-input-placehold{
+            color: @search-input-placehold;
+        }
+    }
+}

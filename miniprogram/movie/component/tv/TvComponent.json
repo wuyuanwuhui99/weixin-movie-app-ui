@@ -1,4 +1,8 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "SwiperComponent": "../swiper/SwiperComponent",
+    "CategoryComponent": "../category/CategoryComponent",
+    "SearchComponent": "../search/SearchComponent"
+  }
 }

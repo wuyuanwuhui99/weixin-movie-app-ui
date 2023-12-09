@@ -1,2 +1,6 @@
-<!--component/tv/Tv.wxml-->
-<text>component/tv/Tv.wxml</text>
+<scroll-view bindscrolltolower="useLoadMore" scroll-y class="scroll-view">
+    <SearchComponent classify="电视剧"/>
+    <SwiperComponent classify='电视剧'></SwiperComponent>
+    <CategoryComponent wx:for="{{currentCategoryList}}" wx:key="category" classifyItem="{{item}}"></CategoryComponent>
+    <view class="bottom-tip">{{allCategoryList.length === currentCategoryList.length ? '已经到底了':'正在加载更多'}}</view>
+</scroll-view>
