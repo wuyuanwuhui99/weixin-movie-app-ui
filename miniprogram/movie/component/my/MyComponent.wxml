@@ -1,2 +1,78 @@
-<!--component/my/My.wxml-->
-<text>component/my/My.wxml</text>
+<scroll-view bindscrolltolower="useLoadMore" scroll-y class="scroll-view">
+    <view class="my-wrapper">
+		<view class="user-wrapper module-block">
+			<AvaterComponent size='big'/>
+			<view class="user-name-wrapper">
+				<text class="user-name">{{userData.username}}</text>
+				<text class="user-sign">{{userData.sign}}</text>
+			</view>
+			<image class="icon-edit" src="../../../images/icon_edit.png"/>
+		</view>
+		
+		<view class="user-msg-wrapper module-block">
+			<view class="user-msg-item">
+				<text class="user-msg-count">{{userMsg.userAge}}</text>
+				<text class="user-msg-title">使用天数</text>
+			</view>
+			<view class="user-msg-item">
+				<text class="user-msg-count">{{userMsg.favoriteCount}}</text>
+				<text class="user-msg-title">收藏</text>
+			</view>
+			<view class="user-msg-item">
+				<text class="user-msg-count">{{userMsg.playRecordCount}}</text>
+				<text class="user-msg-title">观看记录</text>
+			</view>
+			<view class="user-msg-item">
+				<text class="user-msg-count">{{userMsg.viewRecordCount}}</text>
+				<text class="user-msg-title">浏览记录</text>
+			</view>
+		</view>
+		
+		<view class="play-record-view module-block">
+			<view class="title-wrapper" bindtap="useTogglePlayList">
+				<image class="icon-play" src="../../../images/icon_play_record.png"/>
+				<text class="title-text">观看记录</text>
+				<image class="{{showPlayMovieList ? 'icon-arrow icon-arrow-rotate' : 'icon-arrow' }}" src="../../../images/icon_arrow.png"/>
+			</view>
+			<MovieListComponent list="{{playMovieList}}" wx:if="{{playMovieList.length > 0 && showPlayMovieList}}" class="{{playMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
+		</view>
+		
+		<view class="module-block">
+			<view class="title-wrapper" bindtap="useToggleMyFavorite">
+				<image class="icon-play" src="../../../images/icon_collection.png"/>
+				<text class="title-text">我的收藏</text>
+				<image class="icon-arrow" class="{{showMyFavoriteMovieList ? 'icon-arrow icon-arrow-rotate' : 'icon-arrow'}}" src="../../../images/icon_arrow.png"/>
+			</view>
+			<MovieListComponent list="{{myFavoriteMovieList}}" wx:if="{{myFavoriteMovieList.length > 0 && showMyFavoriteMovieList}}" class="{{myFavoriteMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
+		</view>	
+		
+		<view class="module-block">
+			<view class="title-wrapper" bindtap="useToggleMyViews">
+				<image class="icon-play" src="../../../images/icon_record.png"/>
+				<text class="title-text">我浏览过的电影</text>
+                <image class="icon-arrow" class="{{showMyViewsMovieList ? 'icon-arrow icon-arrow-rotate' : 'icon-arrow'}}" src="../../../images/icon_arrow.png"/>
+			</view>
+            <MovieListComponent list="{{myViewsMovieList}}" wx:if="{{myViewsMovieList.length > 0 && showMyViewsMovieList}}" class="{{myViewsMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
+		</view>
+				
+		<view class="module-block module-block-last">
+			<view class="title-wrapper title-wrapper-pading">
+				<image class="icon-play" src="../../../images/icon_music.png"/>
+				<text class="title-text">音乐</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+		
+			<view class="title-wrapper title-wrapper-pading">
+				<image class="icon-play" src="../../../images/icon_music_circle.png"/>
+				<text class="title-text">电影圈</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>	
+		
+			<view class="title-wrapper title-wrapper-pading">
+				<image class="icon-play" src="../../../images/icon_app.png"/>
+				<text class="title-text">小程序</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>	 
+		</view>
+	</view>
+</scroll-view>

@@ -7,23 +7,23 @@
     </view>
     <view class="tab-bar">
         <view class="tab-item" bindtap="useTab" data-index="0">
-            <image class="tab-icon" wx:if="{{activeIndex===0}}" src="../../../images/icon-home-active.png"/>
-            <image class="tab-icon" wx:else src="../../../images/icon-home.png"/>
+            <image class="tab-icon" wx:if="{{activeIndex===0}}" src="../../../images/icon_home_active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon_home.png"/>
             <text class="tab-text {{activeIndex == 0 ? 'tab-text-active' : ''}}">首页</text>
         </view>
         <view class="tab-item" bindtap="useTab" data-index="1">
-            <image class="tab-icon" wx:if="{{activeIndex==1}}" src="../../../images/icon-movie-active.png"/>
-            <image class="tab-icon" wx:else src="../../../images/icon-movie.png"/>
+            <image class="tab-icon" wx:if="{{activeIndex==1}}" src="../../../images/icon_movie_active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon_movie.png"/>
             <text class="tab-text {{activeIndex == 1 ? 'tab-text-active' : ''}}">电影</text>
         </view>
         <view class="tab-item" bindtap="useTab" data-index="2">
-            <image class="tab-icon" wx:if="{{activeIndex==2}}" src="../../../images/icon-tv-active.png"/>
-            <image class="tab-icon" wx:else src="../../../images/icon-tv.png"/>
+            <image class="tab-icon" wx:if="{{activeIndex==2}}" src="../../../images/icon_tv_active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon_tv.png"/>
             <text class="tab-text {{activeIndex == 2 ? 'tab-text-active' : ''}}">电视剧</text>
         </view>
         <view class="tab-item" bindtap="useTab" data-index="3">
-            <image class="tab-icon" wx:if="{{activeIndex==2}}" src="../../../images/icon-user-active.png"/>
-            <image class="tab-icon" wx:else src="../../../images/icon-user.png"/>
+            <image class="tab-icon" wx:if="{{activeIndex==3}}" src="../../../images/icon_user_active.png"/>
+            <image class="tab-icon" wx:else src="../../../images/icon_user.png"/>
             <text class="tab-text {{activeIndex == 3 ? 'tab-text-active' : ''}}">我的</text>
         </view>
     </view>

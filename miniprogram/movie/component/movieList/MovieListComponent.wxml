@@ -1,0 +1,11 @@
+<scroll-view
+    type="list"
+    scroll-x
+    >
+    <view class="scroll-view">
+        <view wx:for="{{list}}" wx:key="id" class="movie-item-wrapper">
+            <image class="movie-img" src="{{HOST + item.localImg}}"/>
+            <text class="movie-name">{{item.movieName}}</text>
+        </view>
+    </view>
+</scroll-view>

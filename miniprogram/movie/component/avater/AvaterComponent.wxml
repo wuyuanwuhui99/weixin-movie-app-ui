@@ -1,1 +1,1 @@
-<image class="user-avater user-avater-middle" wx:if="{{avater}}" src="{{avater}}"/>
+<image class="{{'user-avater ' + sizeMap[size]}}" wx:if="{{avater}}" src="{{avater}}"/>

@@ -19,7 +19,8 @@ Component({
   data: {
     avater:'',
     sizeMap:{
-        middle:'user-avater-middle'
+        middle:'user-avater-middle',
+        big: 'user-avater-big'
     }
   },
 

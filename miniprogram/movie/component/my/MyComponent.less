@@ -1,1 +1,85 @@
-/* component/my/My.wxss */
+@import '../../../theme/color.less';
+@import '../../../theme/size.less';
+@import '../../../theme/style.less';
+.my-wrapper{
+    overflow: auto;
+    .user-wrapper{
+        display: flex;
+        align-items: center;
+        .user-name-wrapper{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: @page-padding;
+            .user-name{
+                font-size: @font-size-big;
+                font-weight: bolder;
+                padding-bottom: @small-margin;
+            }
+            .user-sign{
+                font-size: @font-size-normal;
+                color: @disable-text-color;
+            }
+        }
+        .icon-edit{
+            width: @big-icon-size;
+            height: @big-icon-size;
+        }
+    }
+    .user-msg-wrapper{
+        display: flex;
+        .user-msg-item{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            .user-msg-count{
+                font-size: @font-size-big;
+                font-weight: bolder;
+                padding-bottom: @small-margin;
+            }
+            .user-msg-title{
+                font-size: @font-size-normal;
+                color: @disable-text-color;
+            }
+        }
+    }
+    .play-record-view{
+        .scroll-view-margin{
+            margin-top: @page-padding;
+        }
+    }
+
+    .title-wrapper{
+        display: flex;
+        align-items: center;
+        &.title-wrapper-pading{
+            padding-top: @page-padding;
+            padding-bottom: @page-padding;
+            border-bottom: 1px solid @page-background-color;
+            &:first-child{
+                padding-top:0
+            }
+            &:last-child{
+                padding-bottom:0;
+                border-bottom:none
+            }
+        }
+        .icon-play{
+            width: @middle-icon-size;
+            height: @middle-icon-size;
+            margin-right: @page-padding;
+        }
+        .title-text{
+            flex: 1;
+        }
+    }
+    .icon-arrow{
+        width: @small-icon-size;
+        height: @small-icon-size;
+        opacity: 0.5;
+        &.icon-arrow-rotate{
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,4 +1,8 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+      "TitleComponent":"../title/TitleComponent",
+      "AvaterComponent":"../avater/AvaterComponent",
+      "MovieListComponent":"../movieList/MovieListComponent"
+  }
 }

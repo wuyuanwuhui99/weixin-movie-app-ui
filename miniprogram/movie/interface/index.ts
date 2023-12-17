@@ -43,3 +43,23 @@ export interface ClassifyInterface{
     classify: string,
     category: string
 }
+
+export interface UserMsgInterface {
+	userAge: number,// 使用天数
+	favoriteCount: number,// 收藏数
+	playRecordCount: number,// 观看记录
+	viewRecordCount: number// 浏览记录
+}
+
+export interface StarInterface {
+	id: number,//主键
+	starName: string,//演员名称
+	img: string,//演员图片地址
+	localImg:string,//演员本地图片地址
+	createTime:string,//创建时间
+	updateTime:string,//更新时间
+	movieId:string,//对应电影的id
+	role: string,//角色
+	href: string,//演员的豆瓣链接地址
+	works: string ;//代表作
+}

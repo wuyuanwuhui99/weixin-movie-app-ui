@@ -3,19 +3,19 @@
     <SwiperComponent classify='电影'></SwiperComponent>
     <view class="classify-wrapper module-block">
         <view class="classify-item">
-            <image class="classify-img" src="../../../images/icon-hot.png"/>
+            <image class="classify-img" src="../../../images/icon_hot.png"/>
             <text class="classify-text">热门</text>
         </view>
         <view class="classify-item">
-            <image class="classify-img" src="../../../images/icon-play.png"/>
+            <image class="classify-img" src="../../../images/icon_play.png"/>
             <text class="classify-text">预告</text>
         </view>
         <view class="classify-item">
-            <image class="classify-img" src="../../../images/icon-top.png"/>
+            <image class="classify-img" src="../../../images/icon_top.png"/>
             <text class="classify-text">最新</text>
         </view>
         <view class="classify-item">
-            <image class="classify-img" src="../../../images/icon-classify.png"/>
+            <image class="classify-img" src="../../../images/icon_classify.png"/>
             <text class="classify-text">分类</text>
         </view>
     </view>

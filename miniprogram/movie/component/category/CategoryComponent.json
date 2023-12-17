@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-      "TitleComponent": "../title/TitleComponent"
+      "TitleComponent": "../title/TitleComponent",
+      "MovieListComponent":"../movieList/MovieListComponent"
   }
 }
