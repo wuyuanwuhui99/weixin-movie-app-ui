@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "TitleComponent":"../../component/title/TitleComponent",
+      "MovieListComponent":"../../component/movieList/MovieListComponent"
+  }
+}

@@ -24,6 +24,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    useNavigateTo(e:ClickEvent){
+        const index:number = e.currentTarget.dataset.index;
+        wx.navigateTo({                                 	//页面跳转，传递字符串参数
+            url: '../../pages/detail/MovieDetailPage?data='+JSON.stringify(this.data.list[index])
+        })
+    }
   }
 })

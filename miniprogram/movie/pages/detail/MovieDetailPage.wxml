@@ -1,0 +1,48 @@
+<view class="movie-detail-wrapper" wx:if="{{movieItem.id}}">
+    <scroll-view scroll-y>
+        <view class="module-block module-block-row">
+            <view class="movie-img-wrapper" style="{{'background-image: url('+ HOST + movieItem.localImg +')'}}">
+                <image class="icon-play" src="../../../images/icon_detail_play.png"/>
+            </view>
+            
+            <view class="movie-name-wrapper">
+                <text class="movie-name">{{movieItem.movieName}}</text>
+                <text class="movie-description">{{movieItem.description}}</text>
+                <text class="movie-description">{{movieItem.star}}</text>
+                <text class="movie-description">{{movieItem.type}}</text>
+                <view wx:if="movieItem.score" class="score-wrapper">
+                    <view class="star-wrapper">
+                        <block wx:for="{{scoreStar}}">
+                            <image wx:if="{{item === 'full'}}" src="../../../images/icon_full_star.png" class="star-img"/>
+                            <image wx:elif="{{item === 'half'}}" src="../../../images/icon_half_star.png" class="star-img"/>
+                            <image wx:elif="{{item === 'empty'}}" src="../../../images/icon_empty_star.png" class="star-img"/>
+                        </block>
+                    </view>
+                    <text class="score-text">{{movieItem.score}}</text>
+                </view>
+            </view>
+        </view>
+        
+        <view class="module-block">
+            <TitleComponent title="剧情"/>
+            <text class="plot">{{movieItem.plot}}</text>
+        </view>
+        
+        <view class="module-block">
+            <TitleComponent title="演员"/>
+            <scroll-view scroll-x show-scrollbar="false" class="scroll-view" wx:if="{{starList.length > 0}}">
+                <view class="scroll-view-item" wx:key="{{item.id}}" wx:for="{{starList}}">
+                    <view class="movie-item-wrapper">
+                        <image class="movie-img" src="{{HOST + item.localImg}}"/>
+                        <text class="movie-name">{{item.starName}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        
+        <view class="module-block module-block-last">
+            <TitleComponent title="推荐"/>
+            <MovieListComponent list="{{recommentList}}"/>
+        </view>
+    </scroll-view>
+</view>
