@@ -1,7 +1,7 @@
 <view class="movie-detail-wrapper" wx:if="{{movieItem.id}}">
     <scroll-view scroll-y>
         <view class="module-block module-block-row">
-            <view class="movie-img-wrapper" style="{{'background-image: url('+ HOST + movieItem.localImg +')'}}">
+            <view bindtap="usePlayRouter" class="movie-img-wrapper" style="{{'background-image: url('+ HOST + movieItem.localImg +')'}}">
                 <image class="icon-play" src="../../../images/icon_detail_play.png"/>
             </view>
             
