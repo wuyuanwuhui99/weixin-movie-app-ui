@@ -55,11 +55,14 @@
         grid-column-gap: @middle-margin;
         grid-row-gap: @middle-margin;
         .grid-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-width: 1rpx;
             border-style: solid;
             border-color: @disable-text-color;
-            padding: @small-margin;
             border-radius: @btn-border-radius;
+            padding: @small-margin;
             &.grid-item-active{
                 color: @selected-color;
                 border-color: @selected-color;

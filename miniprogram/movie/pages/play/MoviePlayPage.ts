@@ -21,7 +21,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options: any) {
-        const movieItem: MovieInterface = JSON.parse(options.data) as MovieInterface
+        const movieItem: MovieInterface = JSON.parse(decodeURIComponent(options.data)) as MovieInterface
         movieItem.id = 72667;// 测试数据
         this.setData({ movieItem });
 
@@ -31,7 +31,6 @@ Page({
          * @author wuwenqiang
          */
         getMovieUrlService(movieItem.id).then(res => {
-            console.log(res)
             const movieUrlGroup: Array<Array<MovieUrlInterface>> = [];
             res.data.forEach((dItem, dIndex) => {
                 if (dIndex == 0) {

@@ -25,14 +25,12 @@
             <view class="module-block">
                 <scroll-view scroll-x>
                     <view class="play-group-wrapper">
-                        <text bindtap="useTabPlayGroup" data-index="{{index}}" class="{{currentUrlGroup === index ? 'group-text group-text-active' : 'group-tex'}}" wx:for="{{movieUrlGroup}}">{{item[0].playGroup}}</text>
+                        <text bindtap="useTabPlayGroup" data-index="{{index}}" class="{{currentUrlGroup === index ? 'group-text group-text-active' : 'group-text'}}" wx:for="{{movieUrlGroup}}">{{item[0].playGroup}}</text>
                     </view>
                 </scroll-view>
                 
                 <view class="grid-wrapper">
-                    <text class="grid-item" wx:key="{{item.id}}" class="{{currentUrl === item.url ? 'grid-item grid-item-active': 'grid-item'}}" wx:for="{{movieUrlGroup[currentUrlGroup]}}">
-                        {{item.label}}
-                    </text>
+                    <text wx:key="{{item.id}}" class="{{currentUrl === item.url ? 'grid-item grid-item-active': 'grid-item'}}" wx:for="{{movieUrlGroup[currentUrlGroup]}}">{{item.label}}</text>
                 </view>
             </view>
 

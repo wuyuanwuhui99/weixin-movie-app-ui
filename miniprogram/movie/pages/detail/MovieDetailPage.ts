@@ -42,6 +42,7 @@ Page({
     onLoad(options: any) {
         const movieItem: MovieInterface = JSON.parse(options.data) as MovieInterface
         movieItem.id = 16575 //有数据的电影id
+        this.data.movieItem = movieItem;
         this.setData({
             movieItem
         })
