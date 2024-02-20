@@ -136,6 +136,12 @@ Component({
                     this.data.loading = false;
                 })
             }
+        },
+
+        useNavigateTo(e:ClickEvent):void{
+            wx.navigateTo({//页面跳转，传递字符串参数
+                url: '../../pages/userEdit/UserEditPage'
+            })
         }
     },
 })

@@ -6,7 +6,7 @@
 				<text class="user-name">{{userData.username}}</text>
 				<text class="user-sign">{{userData.sign}}</text>
 			</view>
-			<image class="icon-edit" src="../../../images/icon_edit.png"/>
+			<image class="icon-edit" bindtap="useNavigateTo"  src="../../../images/icon_edit.png"/>
 		</view>
 		
 		<view class="user-msg-wrapper module-block">

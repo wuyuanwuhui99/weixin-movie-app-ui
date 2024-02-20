@@ -2,7 +2,8 @@
   "pages": [
     "movie/pages/index/index",
     "movie/pages/detail/MovieDetailPage",
-    "movie/pages/play/MoviePlayPage"
+    "movie/pages/play/MoviePlayPage",
+    "movie/pages/userEdit/UserEditPage"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

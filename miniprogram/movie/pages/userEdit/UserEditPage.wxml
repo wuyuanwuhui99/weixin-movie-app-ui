@@ -1,0 +1,45 @@
+<view class="page-wrapper">
+		<view class="module-block">
+			<view class="row">
+				<text class="text">头像</text>
+				<image class="big-avater" wx:src="{{userData.avater ? HOST + userData.avater: '../../../images/default_avater.png'}}"/>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row" bindtap="useEditUserData('昵称','username')">
+				<text class="text">昵称</text>
+				<text>{{userData.username}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row" bindtap="useEditSex">
+				<text class="text">性别</text>
+				<text>{{userData.sex}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row" bindtap="useEditUserData('电话','telephone')">
+				<text class="text">电话</text>
+				<text>{{userData.telephone}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row" bindtap="useEditUserData('邮箱','email')">
+				<text class="text">邮箱</text>
+				<text>{{userData.email}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row">
+				<text class="text">生日</text>
+				<text>{{userData.birthday}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row" bindtap="useEditUserData('电话','region')">
+				<text class="text">区域</text>
+				<text>{{userData.region}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+			<view class="row last-row" bindtap="useEditUserData('个性签名','sign')"> 
+				<text class="text">个性签名</text>
+				<text>{{userData.sign}}</text>
+				<image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+			</view>
+		</view>
+		<button class="btn-logout" bindtap="useLogout">退出登录</button>
+	</view>
