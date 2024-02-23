@@ -1,4 +1,6 @@
-const app = getApp();
+import { createStoreBindings, storeBindingsBehavior } from 'mobx-miniprogram-bindings'
+import { store } from '../../../store/index';
+
 import {
     getUserMsgService,
     getPlayRecordMovieListService,
@@ -7,7 +9,15 @@ import {
 } from '../../service/index';
 
 Component({
-
+    
+  behaviors: [storeBindingsBehavior],
+  storeBindings: {
+    // 数据源
+    store, // 指定要绑定的Store
+    fields: { // 要绑定的字段数据
+        userData: 'userData'
+    }
+  },
     /**
      * 组件的属性列表
      */
@@ -34,9 +44,10 @@ Component({
     },
 
     attached(){
-        this.setData({
-            userData:app.globalData.userData
-        })
+        this.storeBindings = createStoreBindings(this, { // 这些绑定到this（此页面上）
+            store, // 数据源
+            fields: ['userData'], // 数据字段
+      })
     },
 
     created(){

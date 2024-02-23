@@ -8,6 +8,13 @@
   "compileType": "miniprogram",
   "projectname": "ts-less-demo",
   "setting": {
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "miniprogram/"
+      }
+    ],
+    "packNpmManually": true,
     "useCompilerPlugins": [
       "typescript",
       "less"

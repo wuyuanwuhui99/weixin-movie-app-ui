@@ -1,7 +1,8 @@
 import api from '../../api/api';
 import {UserDataInterface} from '../../interface';
 import {httpRequest} from '../../../utils/HttpUtils';
-const app = getApp();
+import { createStoreBindings } from 'mobx-miniprogram-bindings'
+import {store} from '../../../store/index';
 
 Page({
 
@@ -26,9 +27,15 @@ Page({
   onLoad() {
     const token = wx.getStorageSync('token');
     httpRequest.setToken(token);
+    // 返回值作用，在页面被卸载的时候做一些清理性质的工作
+    this.storeBindings = createStoreBindings(this, { // 这些绑定到this（此页面上）
+        store, // 数据源
+        fields: ['userData'], // 数据字段
+        actions: ['setUserData'] // 方法
+      });
     httpRequest.get<UserDataInterface>(api.getUserData).then((res)=>{
         const userData:UserDataInterface =  res.data;
-        app.globalData.userData = userData;
+        this.setUserData(userData);
         wx.setStorage({key:'token', data:res.token});
         httpRequest.setToken(res.token);
         this.setData({
@@ -62,7 +69,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    this.storeBindings.detroyStoreBindings()
   },
 
   /**

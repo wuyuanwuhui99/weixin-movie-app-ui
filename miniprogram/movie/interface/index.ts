@@ -34,11 +34,6 @@ export interface MovieInterface {
 	movieName: string;
 }
 
-export interface GlobalDataInterface{
-    userData: UserDataInterface,
-    token: string
-}
-
 export interface ClassifyInterface{
     classify: string,
     category: string

@@ -51,7 +51,7 @@
             </view>
             <view class="dialog-content">
                 <view class="field-text">{{title}}:</view>
-                <input class="text-input" bindinput="bindInput" placeholder="{{'请输入'+title}}" v-model="inputValue"/>
+                <input class="text-input" bindinput="bindInput" placeholder="{{'请输入'+title}}" value="{{inputValue}}"/>
             </view>
             <view class="dialog-footer">
                 <button class="btn-cancle" bindtap="useCloseDialog">取消</button>
