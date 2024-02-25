@@ -125,7 +125,7 @@ Page({
      */
     useRegister() {
         wx.navigateTo({
-            url: `../pages/index/MovieRegisterPage`
+            url: `../register/MovieRegisterPage`
         })
     },
 

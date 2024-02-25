@@ -4,7 +4,8 @@
     "movie/pages/detail/MovieDetailPage",
     "movie/pages/play/MoviePlayPage",
     "movie/pages/userEdit/UserEditPage",
-    "movie/pages/login/LoginPage"
+    "movie/pages/login/LoginPage",
+    "movie/pages/register/MovieRegisterPage"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

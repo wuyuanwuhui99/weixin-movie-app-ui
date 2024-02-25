@@ -1,0 +1,76 @@
+<scroll-view class="scroll-view">
+    <view class="page-wrapper">
+        <view class="module-block">
+            <view class="row">
+                <view class="title">
+                    <text class="require">*</text>
+                    <text>账号</text>
+                </view>
+                <input bindblur="useCheckUserId" class="input" v-model="userData.userId" placeholder="请输入账号名称"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text class="require">*</text>
+                    <text>密码</text>
+                </view>
+                <input type="password" class="input" value="{{userData.password}}" placeholder="请输入密码"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text class="require">*</text>
+                    <text>确认密码</text>
+                </view>
+                <input type="password" value="{{confirmPassowrd}}" class="input" placeholder="请确认密码"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text class="require">*</text>
+                    <text>昵称</text>
+                </view>
+                <input class="input" value="{{userData.username}}" placeholder="请输入昵称"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text>性别</text>
+                </view>
+                <input bindtap="useShowSexDialog" class="input" disabled value="{{userData.sex}}" placeholder="请选择性别"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text>出生日期</text>
+                </view>
+                <picker class="picker" mode="date" header-text="选择时间"  value="{{userData.birthday}}" bindchange="useBirthdayChange">
+                    <input class="input" disabled value="{{userData.birthday}}" placeholder="请选择性别"/>
+                </picker>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text>电话</text>
+                </view>
+                <input class="input" value="{{userData.telephone}}" placeholder="请输入电话号码"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text>邮箱</text>
+                </view>
+                <input class="input" value="{{userData.email}}" placeholder="请输入邮箱"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text>区域</text>
+                </view>
+                <input class="input"  value="{{userData.region}}" placeholder="请输入区域"/>
+            </view>
+            <view class="row">
+                <view class="title">
+                    <text>个性签名</text>
+                </view>
+                <input class="input"  value="{{userData.sign}}" placeholder="请输入个性签名"/>
+            </view>
+        </view>
+        
+        <view class="login-btn" bindtap="useRegister">注册</view>
+        
+        <OptionsDialog wx:if="{{showSexCheckDialog}}" ref="sexOptionsDialog" bindcheck= "useCheckSex" options="{{['男','女']}}" bind:close="useCloseSexDialog"/>
+    </view>
+</scroll-view>

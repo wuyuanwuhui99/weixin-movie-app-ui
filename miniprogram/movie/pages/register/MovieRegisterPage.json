@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "OptionsDialog":"../../component/optionsDialog/OptionsDialog"
+  }
+}
