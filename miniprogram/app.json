@@ -1,6 +1,6 @@
 {
   "pages": [
-    "movie/pages/index/index",
+    "movie/pages/index/IndexPage",
     "movie/pages/detail/MovieDetailPage",
     "movie/pages/play/MoviePlayPage",
     "movie/pages/userEdit/UserEditPage",

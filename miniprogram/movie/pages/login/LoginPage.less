@@ -1,1 +1,64 @@
-/* movie/pages/login/LoginPage.wxss */
+@import '../../../theme/color.less';
+@import '../../../theme/size.less';
+@import '../../../theme/style.less';
+.page-wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 @page-padding @page-padding;
+    background-color: @page-background-color;
+    .module-block{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon-logo{
+            width: @big-avater;
+            height: @big-avater;
+            margin: @middle-icon-size 0;
+        }
+        .login-input-wrapper{
+            margin-top: @page-padding;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            border: 1rpx solid @disable-text-color;
+            padding: @page-padding;
+            box-sizing: border-box;
+            border-radius: @big-border-radius;
+            .icon-login{
+                width: @small-icon-size;
+                height: @middle-icon-size;
+            }
+            .login-input{
+                flex: 1;
+                margin-left: @page-padding;
+            }
+        }
+        
+        .login-btn{
+            text-align: center;
+            width: 100%;
+            padding: @page-padding;
+            box-sizing: border-box;
+            border-radius: @big-border-radius;
+            margin-top:  @page-padding;
+            background-color: @warn-color;
+            color: @module-background-color;
+            display: inline-block;
+        }
+        
+        .register-btn{
+            text-align: center;
+            width: 100%;
+            border: 1rpx solid @disable-text-color;
+            padding: @page-padding;
+            box-sizing: border-box;
+            border-radius: @big-border-radius;
+            margin-top:  @page-padding;
+            display: inline-block;
+            background-color: transparent;
+        }
+    }
+}

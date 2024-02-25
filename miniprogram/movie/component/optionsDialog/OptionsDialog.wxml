@@ -2,7 +2,7 @@
     <view class="dialog-mask" bindtap="useCloseDialog"></view>
     <view class="dialog-content">
         <view class="option-wrapper">
-            <text class="option-item" key="{{item + '' + index}}" wx:for="{{options}}" bindtap="useCheck" data-item="{{item}}">{{item}}</text>
+            <text class="option-item" wx:key="{{item}}" wx:for="{{options}}" bindtap="useCheck" data-item="{{item}}">{{item}}</text>
         </view>
         <view class="option-btn" bindtap="useCloseDialog">取消</view>
     </view>

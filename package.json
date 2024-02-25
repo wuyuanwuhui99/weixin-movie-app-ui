@@ -7,6 +7,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "md5": "^2.3.0",
     "mobx-miniprogram": "^4.13.2",
     "mobx-miniprogram-bindings": "^2.1.5"
   },

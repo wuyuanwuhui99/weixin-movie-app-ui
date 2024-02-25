@@ -1,2 +1,16 @@
-<!--movie/pages/login/LoginPage.wxml-->
-<text>movie/pages/login/LoginPage.wxml</text>
+<view class="page-wrapper">
+    <view class="module-block">
+        <image src="../../../images/icon_logo.png" class="icon-logo"/>
+        <view class="login-input-wrapper">
+            <image src="../../../images/icon_user_active.png" class="icon-login"/>
+            <input bindinput="useInputUserId" value="{{userData.userId}}" class="login-input" placeholder="请输入账号"/>
+        </view>
+        
+        <view class="login-input-wrapper">
+            <image src="../../../images/icon_user_active.png" class="icon-login"/>
+            <input type="password" value="{{password}}" bindinput="useInputPassword" class="login-input" placeholder="请输入密码"/>
+        </view>
+        <view class="login-btn" bindtap="useLogin">登录</view>
+        <view class="register-btn" bindtap="useRegister">注册</view>
+    </view>
+</view>
