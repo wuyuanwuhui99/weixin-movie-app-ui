@@ -178,5 +178,16 @@ Page({
       this.setData({
           showSexCheckDialog:false
       })
+  },
+
+  /**
+	 * @author: wuwenqiang
+	 * @description: 选择出生年月日
+	 * @date: 2024-02-25 12:17
+	 */
+  useBirthdayChange(e:ChangeEvent){
+      this.data.field = 'birthday';
+      this.data.inputValue = e.detail.value;
+    this.useSure();
   }
 })

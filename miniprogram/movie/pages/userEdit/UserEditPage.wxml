@@ -26,11 +26,15 @@
             <text>{{userData.email}}</text>
             <image class="icon-arrow" src="../../../images/icon_arrow.png"/>
         </view>
-        <view class="row">
-            <text class="text">生日</text>
-            <text>{{userData.birthday}}</text>
-            <image class="icon-arrow" src="../../../images/icon_arrow.png"/>
-        </view>
+        <!-- <view class="row"> -->
+        <picker mode="date" header-text="选择时间"  value="{{userData.birthday}}" bindchange="useBirthdayChange">
+            <view class="row">
+                <text class="text">生日</text>
+                <text>{{userData.birthday}}</text>
+                <image class="icon-arrow" src="../../../images/icon_arrow.png"/>
+            </view>    
+        </picker>
+        <!-- </view> -->
         <view class="row" bindtap="useEditUserData" data-title="区域" data-field="region">
             <text class="text">区域</text>
             <text>{{userData.region}}</text>
@@ -74,4 +78,6 @@
     </view>
 
     <OptionsDialog wx:if="{{showSexCheckDialog}}" options="{{['男','女']}}" bind:check="useCheckSex" bind:close="useCloseSexDialog"></OptionsDialog>
+
+    
 </view>
