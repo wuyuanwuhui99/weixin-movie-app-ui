@@ -1,8 +1,17 @@
 import {HOST} from '../../../config/constant';
-const app = getApp();
+import { createStoreBindings, storeBindingsBehavior } from 'mobx-miniprogram-bindings'
+import { store } from '../../../store/index';
 
 Component({
-
+    behaviors: [storeBindingsBehavior],
+    storeBindings: {
+      // 数据源
+      store, // 指定要绑定的Store
+      fields: { // 要绑定的字段数据
+          userData: 'userData'
+      },
+      HOST
+    },
   /**
    * 组件的属性列表
    */
@@ -32,8 +41,15 @@ Component({
   },
 
   attached(){
-    this.setData({
-        avater: HOST + app.globalData.userData.avater
+    createStoreBindings(this, { // 这些绑定到this（此页面上）
+        store, // 数据源
+        fields: ['userData'], // 数据字段
     });
+    if(this.data.userData.avater){
+        this.setData({
+            avater:HOST + this.data.userData.avater
+        })
+    }
+    
   }
 })

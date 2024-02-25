@@ -15,6 +15,7 @@ Page({
     inputValue:"",// 用户修改的值
     showEditDialog:false,// 是否展示编辑弹窗
     showLogoutDialog:false,// 是否显示退出登录弹窗
+    showSexCheckDialog:false,// 是否展示性别选择框
     HOST,// 头像域名
   },
 
@@ -123,9 +124,59 @@ Page({
     });
   },
 
-  useLogout(){
+  /**
+	 * @author: wuwenqiang
+	 * @description: 显示退出登录弹窗
+	 * @date: 2024-02-25 12:16
+	 */
+  useShowLogoutDialog(){
       this.setData({
         showLogoutDialog:true
+      })
+  },
+
+  /**
+	 * @author: wuwenqiang
+	 * @description: 退出登录
+	 * @date: 2024-02-25 12:16
+	 */
+  useLogout(){
+      wx.reLaunch({           
+        url: '../../pages/login/LoginPage'
+    })
+  },
+
+  /**
+	 * @author: wuwenqiang
+	 * @description: 弹出性别选择框
+	 * @date: 2024-02-25 12:17
+	 */
+  useEditSex(){
+    this.data.field = 'sex';
+    this.data.inputValue = this.data.userData.sex;
+    this.setData({
+        showSexCheckDialog:true
+    });
+  },
+
+  /**
+	 * @author: wuwenqiang
+	 * @description: 选择性别
+	 * @date: 2024-02-25 12:17
+	 */
+  useCheckSex(e){
+    this.data.inputValue = e.detail;
+    this.useSure()
+  },
+
+  /**
+	 * @author: wuwenqiang
+	 * @description: 关闭性别选择框
+	 * @date: 2024-02-25 12:17
+	 */
+  useCloseSexDialog(){
+      this.setData({
+          showSexCheckDialog:false
       })
   }
 })

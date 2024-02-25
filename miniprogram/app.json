@@ -3,7 +3,8 @@
     "movie/pages/index/index",
     "movie/pages/detail/MovieDetailPage",
     "movie/pages/play/MoviePlayPage",
-    "movie/pages/userEdit/UserEditPage"
+    "movie/pages/userEdit/UserEditPage",
+    "movie/pages/login/LoginPage"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

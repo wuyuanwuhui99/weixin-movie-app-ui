@@ -1,1 +1,4 @@
-<image class="{{'user-avater ' + sizeMap[size]}}" wx:if="{{avater}}" src="{{avater}}"/>
+<block>
+    <image wx:if="{{userData.avater}}" class="{{'user-avater ' + sizeMap[size]}}" src="{{avater}}"/>
+    <image wx:else class="{{'user-avater ' + sizeMap[size]}}" src="../../../images/default_avater.png"/>
+</block>

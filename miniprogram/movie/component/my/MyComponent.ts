@@ -44,7 +44,7 @@ Component({
     },
 
     attached(){
-        this.storeBindings = createStoreBindings(this, { // 这些绑定到this（此页面上）
+        createStoreBindings(this, { // 这些绑定到this（此页面上）
             store, // 数据源
             fields: ['userData'], // 数据字段
       })
