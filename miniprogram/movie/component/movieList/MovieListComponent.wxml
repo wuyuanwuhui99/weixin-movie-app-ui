@@ -1,8 +1,26 @@
-<scroll-view type="list" scroll-x>
+<!-- <scroll-view type="list" scroll-x>
     <view class="scroll-view">
         <view bindtap="useNavigateTo" data-index="{{index}}" wx:for="{{list}}" wx:key="id" class="movie-item-wrapper">
             <image class="movie-img" src="{{HOST + item.localImg}}"/>
             <text class="movie-name">{{item.movieName}}</text>
         </view>
     </view>
-</scroll-view>
+</scroll-view> -->
+
+<view>
+    <scroll-view wx:if="{{direction === 'horizontal'}}" scroll-x show-scrollbar="false" class="scroll-view">
+        <view  class="scroll-view-item" wx:key="id" data-index="{{index}}" wx:for="{{list}}">
+            <view class="movie-item-wrapper" bindtap="useNavigateTo">
+                <image class="movie-img"  src="{{HOST + item.localImg}}"/>
+                <text class="movie-name">{{item.movieName}}</text>
+            </view>
+        </view>
+    </scroll-view>
+
+    <view class="grid-wrapper" wx:else>
+        <view wx:for="{{list}}" wx:key="id" class="movie-item-wrapper" bindtap="useNavigateTo">
+            <image class="movie-img"  src="{{HOST + item.localImg}}"/>
+            <text class="movie-name">{{item.movieName}}</text>
+        </view>
+    </view>
+</view>

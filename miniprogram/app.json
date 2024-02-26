@@ -5,7 +5,8 @@
     "movie/pages/play/MoviePlayPage",
     "movie/pages/userEdit/UserEditPage",
     "movie/pages/login/LoginPage",
-    "movie/pages/register/MovieRegisterPage"
+    "movie/pages/register/MovieRegisterPage",
+    "movie/pages/search/SearchPage"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

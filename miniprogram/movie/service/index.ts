@@ -203,3 +203,23 @@ export const registerService = (userData:types.UserDataInterface):Promise<MyAwes
 	userData.password = md5(userData.password);
 	return httpRequest.put<number>(api.register,userData)
 };
+
+
+/**
+ * @description: 获取推荐的电影
+ * @date: 2024-02-26 22:15
+ * @author wuwenqiang
+ */
+export const getRecommendService = (classify:string):Promise<MyAwesomeData<Array<types.MovieInterface>>>=>{
+    return httpRequest.get<Array<types.MovieInterface>>(`${api.getRecommend}?classify=${classify}`)
+};
+
+
+/**
+ * @description: 电影搜索
+ * @date: 2024-02-26 22:18
+ * @author wuwenqiang
+ */
+export const getSearchService = (keyword:string,pageNum:number,pageSize:number):Promise<MyAwesomeData<Array<types.MovieInterface>>>=>{
+    return httpRequest.get<Array<types.MovieInterface>>(`${api.getSearch}?keyword=${keyword}&pageNum=${pageNum}&pageSize=${pageSize}`)
+};

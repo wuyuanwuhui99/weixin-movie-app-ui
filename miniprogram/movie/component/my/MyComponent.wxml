@@ -34,7 +34,7 @@
 				<text class="title-text">观看记录</text>
 				<image class="{{showPlayMovieList ? 'icon-arrow icon-arrow-rotate' : 'icon-arrow' }}" src="../../../images/icon_arrow.png"/>
 			</view>
-			<MovieListComponent list="{{playMovieList}}" wx:if="{{playMovieList.length > 0 && showPlayMovieList}}" class="{{playMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
+			<MovieListComponent direction="horizontal" list="{{playMovieList}}" wx:if="{{playMovieList.length > 0 && showPlayMovieList}}" class="{{playMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
 		</view>
 		
 		<view class="module-block">
@@ -43,7 +43,7 @@
 				<text class="title-text">我的收藏</text>
 				<image class="icon-arrow" class="{{showMyFavoriteMovieList ? 'icon-arrow icon-arrow-rotate' : 'icon-arrow'}}" src="../../../images/icon_arrow.png"/>
 			</view>
-			<MovieListComponent list="{{myFavoriteMovieList}}" wx:if="{{myFavoriteMovieList.length > 0 && showMyFavoriteMovieList}}" class="{{myFavoriteMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
+			<MovieListComponent direction="horizontal"list="{{myFavoriteMovieList}}" wx:if="{{myFavoriteMovieList.length > 0 && showMyFavoriteMovieList}}" class="{{myFavoriteMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
 		</view>	
 		
 		<view class="module-block">
@@ -52,7 +52,7 @@
 				<text class="title-text">我浏览过的电影</text>
                 <image class="icon-arrow" class="{{showMyViewsMovieList ? 'icon-arrow icon-arrow-rotate' : 'icon-arrow'}}" src="../../../images/icon_arrow.png"/>
 			</view>
-            <MovieListComponent list="{{myViewsMovieList}}" wx:if="{{myViewsMovieList.length > 0 && showMyViewsMovieList}}" class="{{myViewsMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
+            <MovieListComponent direction="horizontal" list="{{myViewsMovieList}}" wx:if="{{myViewsMovieList.length > 0 && showMyViewsMovieList}}" class="{{myViewsMovieList.length > 0 ? 'scroll-view-margin' : ''}}"/>
 		</view>
 				
 		<view class="module-block module-block-last">

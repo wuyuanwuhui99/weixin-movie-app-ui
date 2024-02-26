@@ -42,7 +42,7 @@
         
         <view class="module-block module-block-last">
             <TitleComponent title="推荐"/>
-            <MovieListComponent list="{{recommentList}}"/>
+            <MovieListComponent direction="horizontal"list="{{recommentList}}"/>
         </view>
     </scroll-view>
 </view>

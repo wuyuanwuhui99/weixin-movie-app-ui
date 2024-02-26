@@ -1,32 +1,59 @@
 @import '../../../theme/style.less';
 @import '../../../theme/size.less';
 .scroll-view{
-    display: flex;
-    flex-wrap: nowrap;
+    white-space: nowrap;
     margin-top: @page-padding;
-    .movie-item-wrapper{
-        display: flex;
-        align-items: center;
-        width: @movie-img-width;
-        flex-direction: column;
+    .scroll-view-item{
+        display: inline-block;
         margin-left: @page-padding;
-
         &:first-child{
             margin-left: 0;
         }
-        .movie-img{
+        .movie-item-wrapper{
+            display: flex;
+            align-items: center;
             width: @movie-img-width;
-            height: @movie-img-height;
+            flex-direction: column;
+
+            .movie-img{
+                width: @movie-img-width;
+                height: @movie-img-height;
+                border-radius: @module-border-radius;
+                margin-bottom: @small-margin;
+            }
+            .movie-name{
+                overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /* 设置最大显示行数 */
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+            }
+        }
+    }
+    
+}
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: @page-padding;
+    .movie-item-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: @page-padding;
+        .movie-img{
+            width: 100%;
             border-radius: @module-border-radius;
             margin-bottom: @small-margin;
+            height: @movie-img-height;
         }
         .movie-name{
             overflow: hidden;
-            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* 设置最大显示行数 */
+            -webkit-box-orient: vertical;
             text-overflow: ellipsis;
-            white-space: nowrap;
-            text-align: center;
-            height: @name-line-height;
         }
     }
 }

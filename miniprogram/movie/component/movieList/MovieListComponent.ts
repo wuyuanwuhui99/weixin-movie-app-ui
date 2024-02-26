@@ -10,6 +10,11 @@ Component({
     list:{
         type: Array<MovieInterface>,
         value:[]
+    },
+
+    direction:{
+        type:String,
+        value:'horizontal'
     }
   },
 

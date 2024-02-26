@@ -1,4 +1,4 @@
 <view class="module-block">
     <TitleComponent title="{{classifyItem.category}}"></TitleComponent>
-    <MovieListComponent list="{{movieList}}"/>
+    <MovieListComponent direction="horizontal" list="{{movieList}}"/>
 </view>

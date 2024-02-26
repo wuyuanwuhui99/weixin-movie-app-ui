@@ -1,0 +1,30 @@
+<scroll-view class="page-wrapper" scroll-y show-scrollbar="false">
+    <view class="module-block module-block-row">
+        <view class="search-input-wrapper">
+            <input class="search-input"  value="{{keyword}}" bindinput="useInputValue" placeholder="{{placeholder}}"/>
+            <image bindtap="useClear" wx:if="{{keyword}}" class="icon-clear" src="../../../images/icon_clear.png"/>
+        </view>
+        <text class="search-btn" bindtap="useSearch">搜索</text>
+    </view>
+
+    <block wx:if="{{searching}}">
+        <view wx:if="{{!loading}}" class="module-block module-block-last">
+            <MovieListComponent direction="vertical" list="{{searchList}}"/>
+        </view>
+    </block>
+
+    <block wx:else>
+        <view class="module-block" style="padding-right: 0;">
+            <TitleComponent title="历史记录"/>
+            <view class="record-list">
+                <text bindtap="useLabelSearch" data-item="{{item}}" wx:if="{{searchRecordList.length > 0}}" class="record-item" wx:for="{{searchRecordList}}">{{item}}</text>
+                <text class="no-data">暂无搜索记录</text>
+            </view>
+        </view>
+        
+        <view class="module-block">
+            <TitleComponent title="推荐"/>
+            <MovieListComponent direction="vertical" list="{{recommentList}}"/>
+        </view>
+    </block>
+</scroll-view>

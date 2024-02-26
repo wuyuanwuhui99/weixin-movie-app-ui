@@ -1,6 +1,6 @@
 <view class="search-wrapper module-block">
     <AvaterComponent size="middle"/>
-    <view class="search-input-wrapper">
+    <view class="search-input-wrapper" bindtap="useNavigateTo">
         <text class="search-input-placehold">{{keyword}}</text>
     </view>
 </view>
